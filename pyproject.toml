@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "ocicat"
+version = "0.1.0"
+description = "A brand-new CCG parser"
+authors = ["TANIGUCHI Masaya <taniguchi@masaya.info>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
