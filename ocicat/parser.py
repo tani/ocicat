@@ -183,8 +183,6 @@ def unify(eqs: Equations) -> Substitutions | None:
             return unify([*rest, (larg, rarg), (lret, rret)])
     return None
 
-_ = cast(int, Unbound())
-
 
 unary_rules = [
     right_type_raising, left_type_raising,
