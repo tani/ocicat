@@ -265,7 +265,6 @@ def dparse(cats: list[Category]) -> Iterator[Category]:
 def parse(cats: list[Category]) -> Iterator[Category]:
     queue = [cats]
     while len(queue) > 0:
-        print(len(queue))
         cats = queue.pop(0)
         if len(cats) == 1:
             yield cats[0]
@@ -289,8 +288,7 @@ def parse(cats: list[Category]) -> Iterator[Category]:
                 new_cats = [substitute(subs, new_cat) for new_cat in new_cats]
                 queue.append(new_cats)
 
-
-w, x, y, z = [Atomic(c) for c in 'w,x,y,z'.split(',')]
-result = dparse([z < ((w < y) > w), x, x > y])
-for c in result:
-    print(c)
+[w,x,y,z] = [Atomic(c) for c in 'w,x,y,z'.split(',')]
+# result = dparse([z < ((w < y) > w), x, x > y])
+#for c in result:
+#    print(c)
